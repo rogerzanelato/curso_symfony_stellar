@@ -114,3 +114,22 @@ A função `path()` também aceita um segundo argumento, que irá enviar os par�
 * @Route("/news/{slug}", name="article_show")
 => {{ path('article_show', { slug: 'why-asteroids-taste-like-bacon'}) }}
 ```
+
+## Como executar o projeto
+Requisitos
+- Docker
+- Docker-compose
+
+```shell
+git clone https://github.com/rogerzanelato/curso_symfony_stellar.git
+
+cd curso_symfony_stellar
+
+docker-compose up
+
+docker exec -it -u dev sf4_php bash
+cd sf4
+composer install
+```
+
+**Após configurar o ambiente, abrir no navegador a URL: http://127.0.0.1:82**.
