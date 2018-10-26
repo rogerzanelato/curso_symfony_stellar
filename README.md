@@ -11,6 +11,8 @@ debug-pack
 asset
 ```
 
+Observação: O pacote debug-pack na verdade é um arquivo composer.json contendo várias dependências juntas. Caso queiramos editar alguma delas, basta utilizarmos o comando `composer unpack debug-pack`. Dessa forma, as dependências agrupadas serão diretamente inseridas no projeto.
+
 ## Como Funciona
 O Symfony por meio do Flex, consegue implementar aliases para seus pacotes, dessa forma, ao invés de por exemplo termos que digitar `composer require symfony/twig-bundle` podemos instalar a dependência apenas com o `composer require twig`.
 Para verificar as `Receitas` que podem ser baixadas, acesse o link: https://symfony.sh/.
@@ -109,7 +111,6 @@ public function homepage()
 
 A função `path()` também aceita um segundo argumento, que irá enviar os parâmetros da rota. Exemplo:
 ```twig
-     * @Route("/news/{slug}", name="article_show")
-        => 
-          {{ path('article_show', { slug: 'why-asteroids-taste-like-bacon'}) }}
+* @Route("/news/{slug}", name="article_show")
+=> {{ path('article_show', { slug: 'why-asteroids-taste-like-bacon'}) }}
 ```
